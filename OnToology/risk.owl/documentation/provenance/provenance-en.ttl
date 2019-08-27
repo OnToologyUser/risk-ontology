@@ -1,0 +1,18 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<http://w3id.org/rioter/risk> a prov:Entity;
+	 dc:title "Cyber-Physic Risk Management Ontology in Critical Infrastructures";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "16/11/2018";
+.
+:agent0 a prov:Agent; foaf:name "Aitor Corchero (Eurecat Technology Centre)".
+:agent1 a prov:Agent; foaf:name "Achim Mälzer (IWW)".
+:agent2 a prov:Agent; foaf:name "Enric Bonet (CETAQUA)".
+:agent3 a prov:Agent; foaf:name "Fabian Vollmer (IWW)".
+:agent4 a prov:Agent; foaf:name "George Karavokiros (NTUA)".

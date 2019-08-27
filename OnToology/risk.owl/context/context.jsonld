@@ -1,0 +1,184 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Software" : {
+      "@id" : "http://w3id.org/rioter/risk#Software"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "CriticalInfrastructure" : {
+      "@id" : "http://w3id.org/rioter#CriticalInfrastructure"
+    },
+    "Asset" : {
+      "@id" : "http://w3id.org/rioter#Asset"
+    },
+    "Infrastructure" : {
+      "@id" : "http://w3id.org/rioter#Infrastructure"
+    },
+    "Vulnerability" : {
+      "@id" : "http://w3id.org/rioter/risk#Vulnerability"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "Source" : {
+      "@id" : "http://w3id.org/rioter/risk#Source"
+    },
+    "Indicator" : {
+      "@id" : "http://w3id.org/rioter#Indicator"
+    },
+    "Human" : {
+      "@id" : "http://w3id.org/rioter/risk#Human"
+    },
+    "PhysicalSphere" : {
+      "@id" : "http://w3id.org/rioter/risk#PhysicalSphere"
+    },
+    "Measurement" : {
+      "@id" : "http://w3id.org/saref#Measurement"
+    },
+    "consequence" : {
+      "@id" : "http://w3id.org/rioter/risk#consequence",
+      "@type" : "@id"
+    },
+    "Event" : {
+      "@id" : "http://w3id.org/rioter/risk#Event"
+    },
+    "event" : {
+      "@id" : "http://w3id.org/rioter/risk#event",
+      "@type" : "@id"
+    },
+    "affects" : {
+      "@id" : "http://w3id.org/rioter/risk#affects",
+      "@type" : "@id"
+    },
+    "Risk" : {
+      "@id" : "http://w3id.org/rioter/risk#Risk"
+    },
+    "PhysicalRisk" : {
+      "@id" : "http://w3id.org/rioter/risk#PhysicalRisk"
+    },
+    "Consequence" : {
+      "@id" : "http://w3id.org/rioter/risk#Consequence"
+    },
+    "Anomaly" : {
+      "@id" : "http://w3id.org/rioter/risk#Anomaly"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "http://w3id.org/rioter#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mitigationAction" : {
+      "@id" : "http://w3id.org/rioter/risk#mitigationAction",
+      "@type" : "@id"
+    },
+    "SampledFeature" : {
+      "@id" : "http://w3id.org/rioter#SampledFeature"
+    },
+    "DigitalSphere" : {
+      "@id" : "http://w3id.org/rioter/risk#DigitalSphere"
+    },
+    "Problem" : {
+      "@id" : "http://w3id.org/rioter/risk#Problem"
+    },
+    "LoAH" : {
+      "@id" : "http://w3id.org/rioter/risk#LoAH",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "identifier" : {
+      "@id" : "http://w3id.org/rioter/risk#identifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "domain" : {
+      "@id" : "http://w3id.org/rioter#domain",
+      "@type" : "@id"
+    },
+    "associatedRisk" : {
+      "@id" : "http://w3id.org/rioter/risk#associatedRisk",
+      "@type" : "@id"
+    },
+    "objective" : {
+      "@id" : "http://w3id.org/rioter/risk#objective",
+      "@type" : "@id"
+    },
+    "LoC" : {
+      "@id" : "http://w3id.org/rioter/risk#LoC",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "vulnerability" : {
+      "@id" : "http://w3id.org/rioter/risk#vulnerability",
+      "@type" : "@id"
+    },
+    "Mitigation" : {
+      "@id" : "http://w3id.org/rioter/risk#Mitigation"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://w3id.org/rioter/risk#source",
+      "@type" : "@id"
+    },
+    "consequenceDimension" : {
+      "@id" : "http://w3id.org/rioter/risk#consequenceDimension",
+      "@type" : "@id"
+    },
+    "Threat" : {
+      "@id" : "http://w3id.org/rioter/risk#Threat"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "NaturalArtifact" : {
+      "@id" : "http://w3id.org/rioter#NaturalArtifact"
+    },
+    "CyberRisk" : {
+      "@id" : "http://w3id.org/rioter/risk#CyberRisk"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "System" : {
+      "@id" : "http://w3id.org/rioter#System"
+    },
+    "monitoredBy" : {
+      "@id" : "http://w3id.org/rioter/risk#monitoredBy",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://spinrdf.org/spin#imports"
+    },
+    "Device" : {
+      "@id" : "http://w3id.org/rioter#Device"
+    },
+    "Action" : {
+      "@id" : "http://w3id.org/rioter#Action"
+    },
+    "risk" : {
+      "@id" : "http://w3id.org/rioter/risk#risk",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://w3id.org/rioter#description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "NaturalEvent" : {
+      "@id" : "http://w3id.org/rioter/risk#NaturalEvent"
+    },
+    "PhysicalObject" : {
+      "@id" : "http://w3id.org/rioter#PhysicalObject"
+    },
+    "LoAS" : {
+      "@id" : "http://w3id.org/rioter/risk#LoAS",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  }
+}

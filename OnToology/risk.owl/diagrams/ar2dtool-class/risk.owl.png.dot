@@ -1,0 +1,39 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "rioter:Device" "base:Consequence" "base:Risk" "rioter:Asset" "base:Source" "base:Event" "rioter:Indicator" "base:Vulnerability" "base:Mitigation" ; /*classes style*/
+	"NULL" -> "base:Risk" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "-66a15e86:16ddb5a7668:-7ff1" [ label = "rdf:rest" ];
+	"NULL" -> "-66a15e86:16ddb5a7668:-7ff7" [ label = "owl:intersectionOf" ];
+	"NULL" -> "base:risk" [ label = "owl:onProperty" ];
+	"NULL" -> "base:associatedRisk" [ label = "owl:onProperty" ];
+	"NULL" -> "rioter:Asset" [ label = "rdf:first" ];
+	"NULL" -> "-66a15e86:16ddb5a7668:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "base:Consequence" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "-66a15e86:16ddb5a7668:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "base:consequenceDimension" [ label = "owl:onProperty" ];
+	"NULL" -> "-66a15e86:16ddb5a7668:-7ffb" [ label = "owl:intersectionOf" ];
+	"NULL" -> "-66a15e86:16ddb5a7668:-7ff3" [ label = "owl:intersectionOf" ];
+	"http://w3id.org/rioter/risk" -> "http://topbraid.org/spin/spinowl" [ label = "spin:imports" ];
+	"http://w3id.org/rioter/risk" -> "http://w3id.org/rioter/risk" [ label = "owl:versionIRI" ];
+	"http://w3id.org/rioter/risk" -> "http://topbraid.org/spin/owlrl-all" [ label = "spin:imports" ];
+	"owl:Thing" -> "base:Risk" [ label = "base:risk" ];
+	"owl:Thing" -> "xsd:string" [ label = "rioter:name" ];
+	"rioter:Asset" -> "base:Event" [ label = "base:event" ];
+	"rioter:Asset" -> "base:Vulnerability" [ label = "base:vulnerability" ];
+	"owl:Thing" -> "xsd:integer" [ label = "base:LoAS" ];
+	"owl:Thing" -> "xsd:string" [ label = "rioter:description" ];
+	"base:Risk" -> "rioter:Indicator" [ label = "base:objective" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:identifier" ];
+	"base:Risk" -> "base:Risk" [ label = "base:affects" ];
+	"owl:Thing" -> "base:Source" [ label = "base:source" ];
+	"base:Risk" -> "base:Consequence" [ label = "base:consequence" ];
+	"owl:Thing" -> "xsd:integer" [ label = "base:LoAH" ];
+	"base:Source" -> "base:Risk" [ label = "base:associatedRisk" ];
+	"base:Mitigation" -> "base:Consequence" [ label = "base:consequenceDimension" ];
+	"owl:Thing" -> "rioter:Device" [ label = "base:monitoredBy" ];
+	"owl:Thing" -> "xsd:integer" [ label = "base:LoC" ];
+	"base:Risk" -> "base:Mitigation" [ label = "base:mitigationAction" ];
+
+}

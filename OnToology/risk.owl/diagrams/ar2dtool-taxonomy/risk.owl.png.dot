@@ -1,0 +1,40 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:DigitalSphere" "rioter:NaturalArtifact" "rioter:Device" "saref:Measurement" "base:Problem" "rioter:PhysicalObject" "rioter:Action" "base:Consequence" "base:Risk" "rioter:Asset" "base:Source" "base:Event" "18f34b6a:16ddb5a698f:-7ff4" "rioter:Indicator" "base:CyberRisk" "base:Software" "18f34b6a:16ddb5a698f:-7ff8" "base:Vulnerability" "rioter:System" "base:Anomaly" "rioter:Infrastructure" "rioter:SampledFeature" "18f34b6a:16ddb5a698f:-7ffc" "base:PhysicalSphere" "rioter:CriticalInfrastructure" "base:NaturalEvent" "base:Threat" "base:Human" "base:Action" "rioter:Event" "base:Mitigation" "base:PhysicalRisk" ; /*classes style*/
+	"base:Threat" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:DigitalSphere" -> "rioter:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"base:Risk" -> "base:Event" [ label = "rdfs:subClassOf" ];
+	"rioter:Asset" -> "18f34b6a:16ddb5a698f:-7ffc" [ label = "rdfs:subClassOf" ];
+	"rioter:Asset" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:Problem" -> "base:Event" [ label = "rdfs:subClassOf" ];
+	"rioter:PhysicalObject" -> "rioter:Asset" [ label = "rdfs:subClassOf" ];
+	"saref:Measurement" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:PhysicalSphere" -> "rioter:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"base:NaturalEvent" -> "rioter:NaturalArtifact" [ label = "rdfs:subClassOf" ];
+	"base:NaturalEvent" -> "base:Event" [ label = "rdfs:subClassOf" ];
+	"rioter:Action" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:CyberRisk" -> "base:Risk" [ label = "rdfs:subClassOf" ];
+	"base:Event" -> "rioter:Event" [ label = "rdfs:subClassOf" ];
+	"rioter:CriticalInfrastructure" -> "rioter:Infrastructure" [ label = "rdfs:subClassOf" ];
+	"base:Vulnerability" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"rioter:Device" -> "rioter:System" [ label = "rdfs:subClassOf" ];
+	"base:Consequence" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:Anomaly" -> "base:Event" [ label = "rdfs:subClassOf" ];
+	"rioter:NaturalArtifact" -> "rioter:SampledFeature" [ label = "rdfs:subClassOf" ];
+	"rioter:NaturalArtifact" -> "base:PhysicalSphere" [ label = "rdfs:subClassOf" ];
+	"rioter:System" -> "base:DigitalSphere" [ label = "rdfs:subClassOf" ];
+	"base:Mitigation" -> "18f34b6a:16ddb5a698f:-7ff4" [ label = "rdfs:subClassOf" ];
+	"base:Mitigation" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:Software" -> "base:DigitalSphere" [ label = "rdfs:subClassOf" ];
+	"rioter:Indicator" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
+	"rioter:Event" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"rioter:SampledFeature" -> "rioter:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"base:PhysicalRisk" -> "base:Risk" [ label = "rdfs:subClassOf" ];
+	"base:Human" -> "base:PhysicalSphere" [ label = "rdfs:subClassOf" ];
+	"rioter:Infrastructure" -> "base:PhysicalSphere" [ label = "rdfs:subClassOf" ];
+	"base:Source" -> "18f34b6a:16ddb5a698f:-7ff8" [ label = "rdfs:subClassOf" ];
+	"base:Source" -> "base:Threat" [ label = "rdfs:subClassOf" ];
+	"base:Action" -> "rioter:Action" [ label = "rdfs:subClassOf" ];
+
+}

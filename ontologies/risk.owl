@@ -1,0 +1,989 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/rioter/risk#"
+     xml:base="http://w3id.org/rioter/risk"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:geo="http://www.opengis.net/ont/geosparql#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:spin="http://spinrdf.org/spin#"
+     xmlns:saref="http://w3id.org/saref#"
+     xmlns:rioter="http://w3id.org/rioter#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://stop-it-project.eu/vocab">
+        <owl:versionIRI rdf:resource="http://stop-it-project.eu/vocab"/>
+        <dc:contributor>Achim Mälzer (IWW)</dc:contributor>
+        <dc:contributor>Enric Bonet (CETAQUA)</dc:contributor>
+        <dc:contributor>Fabian Vollmer (IWW)</dc:contributor>
+        <dc:contributor>George Karavokiros (NTUA)</dc:contributor>
+        <dc:creator>Aitor Corchero (Eurecat Technology Centre)</dc:creator>
+        <dc:description>Rioter Extension focused on managing risks in critical infrastructures</dc:description>
+        <dc:source>risk</dc:source>
+        <dc:title>Cyber-Physic Risk Management Ontology in Critical Infrastructures</dc:title>
+        <dcterms:created>01/07/2018</dcterms:created>
+        <dcterms:license>https://opensource.org/licenses/MIT</dcterms:license>
+        <dcterms:modified>16/11/2018</dcterms:modified>
+        <spin:imports rdf:resource="http://topbraid.org/spin/owlrl-all"/>
+        <spin:imports rdf:resource="http://topbraid.org/spin/spinowl"/>
+        <owl:versionInfo>1.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://spinrdf.org/spin#imports -->
+
+    <owl:AnnotationProperty rdf:about="http://spinrdf.org/spin#imports"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#affects -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#affects">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#associatedRisk -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#associatedRisk">
+        <rdfs:domain rdf:resource="http://stop-it-project.eu/vocab#Source"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#consequence -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#consequence">
+        <rdfs:domain rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Consequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#consequenceDimension -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#consequenceDimension">
+        <rdfs:domain rdf:resource="http://stop-it-project.eu/vocab#Mitigation"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Consequence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#event -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#event">
+        <rdfs:domain rdf:resource="http://w3id.org/rioter#Asset"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#mitigationAction -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#mitigationAction">
+        <rdfs:domain rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Mitigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#monitoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#monitoredBy"/>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#objective -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#objective">
+        <rdfs:domain rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#risk -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#risk">
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#source -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#source">
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#vulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://stop-it-project.eu/vocab#vulnerability">
+        <rdfs:domain rdf:resource="http://w3id.org/rioter#Asset"/>
+        <rdfs:range rdf:resource="http://stop-it-project.eu/vocab#Vulnerability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/rioter#domain -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/rioter#domain"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#LoAH -->
+
+    <owl:DatatypeProperty rdf:about="http://stop-it-project.eu/vocab#LoAH">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#LoAS -->
+
+    <owl:DatatypeProperty rdf:about="http://stop-it-project.eu/vocab#LoAS">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#LoC -->
+
+    <owl:DatatypeProperty rdf:about="http://stop-it-project.eu/vocab#LoC">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://stop-it-project.eu/vocab#identifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rioter#description -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rioter#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/rioter#name -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/rioter#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Acquifer -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Acquifer">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Groundwater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Action -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Action"/>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Actuator -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Actuator">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#DistributionDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Anomaly -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Anomaly">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Atmospheric -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Atmospheric">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Attacker -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Attacker">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Basin -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Basin">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Bay -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Bay">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#BodyOfWater -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#BodyOfWater">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#NaturalArtifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Cameras -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Cameras">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#SecurityDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#CatchmentArea -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#CatchmentArea">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#NaturalArtifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Channel -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Channel">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Consequence -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Consequence">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#ConsequenceMitigation -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#ConsequenceMitigation">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#ControlSystems -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#ControlSystems">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#CyberBarrier -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#CyberBarrier">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#CyberRisk -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#CyberRisk">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Dam -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Dam">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#DistributionDevice -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#DistributionDevice">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#WaterDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#DistributionFlowDevice -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#DistributionFlowDevice">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#WaterDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#EconomicPolicy -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#EconomicPolicy">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#EnergyCriticalInfrastructure -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#EnergyCriticalInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#CriticalInfrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Estuary -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Estuary">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Event -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Event">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Fault -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Fault">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Firewall -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Firewall">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#SecurityDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#FlowMovingDevice -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#FlowMovingDevice">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#DistributionFlowDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#FlowStorageDevice -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#FlowStorageDevice">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#DistributionFlowDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Glacier -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Glacier">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Groundwater -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Groundwater">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Infiltration -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Infiltration">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Groundwater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Lagoon -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Lagoon">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Lake -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Lake">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Land -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Land">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#ManMadeArtifact -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#ManMadeArtifact">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#WaterObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Measure -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Measure"/>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Mitigation -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Mitigation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://stop-it-project.eu/vocab#consequenceDimension"/>
+                <owl:allValuesFrom rdf:resource="http://stop-it-project.eu/vocab#Consequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Mouth -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Mouth">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#NaturalEvent -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#NaturalEvent">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Event"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#NaturalArtifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Ocean -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Ocean">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#PhysicalBarrier -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#PhysicalBarrier">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#PhysicalRisk -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#PhysicalRisk">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Pipes -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Pipes">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#FlowMovingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Plans -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Plans">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Problem -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Problem">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Pump -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Pump">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#FlowMovingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Redundancy -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Redundancy">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Reservoir -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Reservoir">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Groundwater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Risk -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Risk">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#River -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#River">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#SCADA -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#SCADA">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#DistributionDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Sea -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Sea">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#SecurityDevice -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#SecurityDevice">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#WaterDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Sensor -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Sensor">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#DistributionDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#SmartLocks -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#SmartLocks">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#SecurityDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Source -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Source"/>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Spring -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Spring">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Stream -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Stream">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Surface -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Surface">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Tank -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Tank">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#FlowStorageDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#TransportCriticalInfrastructure -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#TransportCriticalInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#CriticalInfrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Vulnerability -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Vulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#WaterCriticalInfrastructure -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#WaterCriticalInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#CriticalInfrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#WaterDevice -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#WaterDevice">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#WaterObject"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#WaterObject -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#WaterObject">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Watershed -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Watershed">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Wetland -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Wetland">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Wind -->
+
+    <owl:Class rdf:about="http://stop-it-project.eu/vocab#Wind">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#Atmospheric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#Action -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#Action">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#Asset -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#CriticalInfrastructure -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#CriticalInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#Event -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#Event">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#Infrastructure -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#NaturalArtifact -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#NaturalArtifact">
+        <rdfs:subClassOf rdf:resource="http://stop-it-project.eu/vocab#WaterObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/rioter#PhysicalObject -->
+
+    <owl:Class rdf:about="http://w3id.org/rioter#PhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#Asset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- https://w3id.org/saref#Device -->
+
+    <owl:Class rdf:about="https://w3id.org/saref#Device">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/rioter#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#ExternalAttacker -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#ExternalAttacker">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Attacker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#ExternalSupplier -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#ExternalSupplier">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Source"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#HumanFault -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#HumanFault">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Fault"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#InterdependantCI -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#InterdependantCI">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Source"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#InternalAttacker -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#InternalAttacker">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Attacker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#M01 -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#M01">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#PhysicalBarrier"/>
+        <rioter:name>FencesAndWalls</rioter:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Predictive -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#Predictive">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Action"/>
+        <rioter:description>Action derived from the computation of some system</rioter:description>
+        <rioter:name>Predictive Action</rioter:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Proactive -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#Proactive">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Action"/>
+        <rioter:description>Action derived from some scheduled action.</rioter:description>
+        <rioter:name>Proactive</rioter:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://stop-it-project.eu/vocab#Reactive -->
+
+    <owl:NamedIndividual rdf:about="http://stop-it-project.eu/vocab#Reactive">
+        <rdf:type rdf:resource="http://stop-it-project.eu/vocab#Action"/>
+        <rioter:description>Action produced once the threat has been materialised</rioter:description>
+        <rioter:name>Reactive Action</rioter:name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

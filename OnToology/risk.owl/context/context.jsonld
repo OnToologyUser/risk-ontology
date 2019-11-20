@@ -1,16 +1,28 @@
 {
   "@context" : {
+    "EconomicPolicy" : {
+      "@id" : "http://stop-it-project.eu/vocab#EconomicPolicy"
+    },
+    "PhysicalBarrier" : {
+      "@id" : "http://stop-it-project.eu/vocab#PhysicalBarrier"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "Software" : {
-      "@id" : "http://w3id.org/rioter/risk#Software"
+    "ConsequenceMitigation" : {
+      "@id" : "http://stop-it-project.eu/vocab#ConsequenceMitigation"
     },
     "created" : {
       "@id" : "http://purl.org/dc/terms/created"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
+    },
+    "Dam" : {
+      "@id" : "http://stop-it-project.eu/vocab#Dam"
+    },
+    "Spring" : {
+      "@id" : "http://stop-it-project.eu/vocab#Spring"
     },
     "CriticalInfrastructure" : {
       "@id" : "http://w3id.org/rioter#CriticalInfrastructure"
@@ -22,52 +34,88 @@
       "@id" : "http://w3id.org/rioter#Infrastructure"
     },
     "Vulnerability" : {
-      "@id" : "http://w3id.org/rioter/risk#Vulnerability"
+      "@id" : "http://stop-it-project.eu/vocab#Vulnerability"
+    },
+    "Basin" : {
+      "@id" : "http://stop-it-project.eu/vocab#Basin"
     },
     "Thing" : {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
+    "CyberBarrier" : {
+      "@id" : "http://stop-it-project.eu/vocab#CyberBarrier"
+    },
     "Source" : {
-      "@id" : "http://w3id.org/rioter/risk#Source"
+      "@id" : "http://stop-it-project.eu/vocab#Source"
     },
-    "Indicator" : {
-      "@id" : "http://w3id.org/rioter#Indicator"
+    "River" : {
+      "@id" : "http://stop-it-project.eu/vocab#River"
     },
-    "Human" : {
-      "@id" : "http://w3id.org/rioter/risk#Human"
+    "SecurityDevice" : {
+      "@id" : "http://stop-it-project.eu/vocab#SecurityDevice"
     },
-    "PhysicalSphere" : {
-      "@id" : "http://w3id.org/rioter/risk#PhysicalSphere"
+    "Infiltration" : {
+      "@id" : "http://stop-it-project.eu/vocab#Infiltration"
     },
-    "Measurement" : {
-      "@id" : "http://w3id.org/saref#Measurement"
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    },
+    "Wind" : {
+      "@id" : "http://stop-it-project.eu/vocab#Wind"
+    },
+    "Tank" : {
+      "@id" : "http://stop-it-project.eu/vocab#Tank"
+    },
+    "BodyOfWater" : {
+      "@id" : "http://stop-it-project.eu/vocab#BodyOfWater"
+    },
+    "Wetland" : {
+      "@id" : "http://stop-it-project.eu/vocab#Wetland"
     },
     "consequence" : {
-      "@id" : "http://w3id.org/rioter/risk#consequence",
+      "@id" : "http://stop-it-project.eu/vocab#consequence",
       "@type" : "@id"
     },
+    "DistributionDevice" : {
+      "@id" : "http://stop-it-project.eu/vocab#DistributionDevice"
+    },
     "Event" : {
-      "@id" : "http://w3id.org/rioter/risk#Event"
+      "@id" : "http://w3id.org/rioter#Event"
+    },
+    "Pipes" : {
+      "@id" : "http://stop-it-project.eu/vocab#Pipes"
+    },
+    "ControlSystems" : {
+      "@id" : "http://stop-it-project.eu/vocab#ControlSystems"
     },
     "event" : {
-      "@id" : "http://w3id.org/rioter/risk#event",
+      "@id" : "http://stop-it-project.eu/vocab#event",
       "@type" : "@id"
     },
     "affects" : {
-      "@id" : "http://w3id.org/rioter/risk#affects",
+      "@id" : "http://stop-it-project.eu/vocab#affects",
       "@type" : "@id"
     },
+    "Measure" : {
+      "@id" : "http://stop-it-project.eu/vocab#Measure"
+    },
+    "FlowMovingDevice" : {
+      "@id" : "http://stop-it-project.eu/vocab#FlowMovingDevice"
+    },
     "Risk" : {
-      "@id" : "http://w3id.org/rioter/risk#Risk"
+      "@id" : "http://stop-it-project.eu/vocab#Risk"
+    },
+    "ManMadeArtifact" : {
+      "@id" : "http://stop-it-project.eu/vocab#ManMadeArtifact"
     },
     "PhysicalRisk" : {
-      "@id" : "http://w3id.org/rioter/risk#PhysicalRisk"
+      "@id" : "http://stop-it-project.eu/vocab#PhysicalRisk"
     },
     "Consequence" : {
-      "@id" : "http://w3id.org/rioter/risk#Consequence"
+      "@id" : "http://stop-it-project.eu/vocab#Consequence"
     },
     "Anomaly" : {
-      "@id" : "http://w3id.org/rioter/risk#Anomaly"
+      "@id" : "http://stop-it-project.eu/vocab#Anomaly"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
@@ -77,108 +125,204 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "mitigationAction" : {
-      "@id" : "http://w3id.org/rioter/risk#mitigationAction",
+      "@id" : "http://stop-it-project.eu/vocab#mitigationAction",
       "@type" : "@id"
     },
-    "SampledFeature" : {
-      "@id" : "http://w3id.org/rioter#SampledFeature"
+    "Land" : {
+      "@id" : "http://stop-it-project.eu/vocab#Land"
     },
-    "DigitalSphere" : {
-      "@id" : "http://w3id.org/rioter/risk#DigitalSphere"
+    "FlowStorageDevice" : {
+      "@id" : "http://stop-it-project.eu/vocab#FlowStorageDevice"
+    },
+    "SCADA" : {
+      "@id" : "http://stop-it-project.eu/vocab#SCADA"
+    },
+    "Bay" : {
+      "@id" : "http://stop-it-project.eu/vocab#Bay"
     },
     "Problem" : {
-      "@id" : "http://w3id.org/rioter/risk#Problem"
+      "@id" : "http://stop-it-project.eu/vocab#Problem"
+    },
+    "Estuary" : {
+      "@id" : "http://stop-it-project.eu/vocab#Estuary"
     },
     "LoAH" : {
-      "@id" : "http://w3id.org/rioter/risk#LoAH",
+      "@id" : "http://stop-it-project.eu/vocab#LoAH",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "identifier" : {
-      "@id" : "http://w3id.org/rioter/risk#identifier",
+      "@id" : "http://stop-it-project.eu/vocab#identifier",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Plans" : {
+      "@id" : "http://stop-it-project.eu/vocab#Plans"
     },
     "domain" : {
       "@id" : "http://w3id.org/rioter#domain",
       "@type" : "@id"
     },
     "associatedRisk" : {
-      "@id" : "http://w3id.org/rioter/risk#associatedRisk",
+      "@id" : "http://stop-it-project.eu/vocab#associatedRisk",
       "@type" : "@id"
+    },
+    "DistributionFlowDevice" : {
+      "@id" : "http://stop-it-project.eu/vocab#DistributionFlowDevice"
+    },
+    "Lagoon" : {
+      "@id" : "http://stop-it-project.eu/vocab#Lagoon"
     },
     "objective" : {
-      "@id" : "http://w3id.org/rioter/risk#objective",
+      "@id" : "http://stop-it-project.eu/vocab#objective",
       "@type" : "@id"
     },
+    "Watershed" : {
+      "@id" : "http://stop-it-project.eu/vocab#Watershed"
+    },
+    "EnergyCriticalInfrastructure" : {
+      "@id" : "http://stop-it-project.eu/vocab#EnergyCriticalInfrastructure"
+    },
+    "Groundwater" : {
+      "@id" : "http://stop-it-project.eu/vocab#Groundwater"
+    },
     "LoC" : {
-      "@id" : "http://w3id.org/rioter/risk#LoC",
+      "@id" : "http://stop-it-project.eu/vocab#LoC",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
+    "SmartLocks" : {
+      "@id" : "http://stop-it-project.eu/vocab#SmartLocks"
+    },
+    "WaterObject" : {
+      "@id" : "http://stop-it-project.eu/vocab#WaterObject"
+    },
     "vulnerability" : {
-      "@id" : "http://w3id.org/rioter/risk#vulnerability",
+      "@id" : "http://stop-it-project.eu/vocab#vulnerability",
       "@type" : "@id"
     },
     "Mitigation" : {
-      "@id" : "http://w3id.org/rioter/risk#Mitigation"
+      "@id" : "http://stop-it-project.eu/vocab#Mitigation"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "source" : {
-      "@id" : "http://w3id.org/rioter/risk#source",
+      "@id" : "http://stop-it-project.eu/vocab#source",
       "@type" : "@id"
     },
     "consequenceDimension" : {
-      "@id" : "http://w3id.org/rioter/risk#consequenceDimension",
+      "@id" : "http://stop-it-project.eu/vocab#consequenceDimension",
       "@type" : "@id"
     },
-    "Threat" : {
-      "@id" : "http://w3id.org/rioter/risk#Threat"
+    "Glacier" : {
+      "@id" : "http://stop-it-project.eu/vocab#Glacier"
+    },
+    "Sea" : {
+      "@id" : "http://stop-it-project.eu/vocab#Sea"
+    },
+    "Cameras" : {
+      "@id" : "http://stop-it-project.eu/vocab#Cameras"
     },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified"
     },
+    "Mouth" : {
+      "@id" : "http://stop-it-project.eu/vocab#Mouth"
+    },
+    "Stream" : {
+      "@id" : "http://stop-it-project.eu/vocab#Stream"
+    },
+    "CatchmentArea" : {
+      "@id" : "http://stop-it-project.eu/vocab#CatchmentArea"
+    },
+    "Pump" : {
+      "@id" : "http://stop-it-project.eu/vocab#Pump"
+    },
+    "Channel" : {
+      "@id" : "http://stop-it-project.eu/vocab#Channel"
+    },
+    "Fault" : {
+      "@id" : "http://stop-it-project.eu/vocab#Fault"
+    },
+    "Redundancy" : {
+      "@id" : "http://stop-it-project.eu/vocab#Redundancy"
+    },
     "NaturalArtifact" : {
       "@id" : "http://w3id.org/rioter#NaturalArtifact"
     },
+    "Acquifer" : {
+      "@id" : "http://stop-it-project.eu/vocab#Acquifer"
+    },
+    "Actuator" : {
+      "@id" : "http://stop-it-project.eu/vocab#Actuator"
+    },
     "CyberRisk" : {
-      "@id" : "http://w3id.org/rioter/risk#CyberRisk"
+      "@id" : "http://stop-it-project.eu/vocab#CyberRisk"
+    },
+    "WaterDevice" : {
+      "@id" : "http://stop-it-project.eu/vocab#WaterDevice"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/elements/1.1/contributor"
     },
-    "System" : {
-      "@id" : "http://w3id.org/rioter#System"
+    "Lake" : {
+      "@id" : "http://stop-it-project.eu/vocab#Lake"
+    },
+    "TransportCriticalInfrastructure" : {
+      "@id" : "http://stop-it-project.eu/vocab#TransportCriticalInfrastructure"
     },
     "monitoredBy" : {
-      "@id" : "http://w3id.org/rioter/risk#monitoredBy",
+      "@id" : "http://stop-it-project.eu/vocab#monitoredBy",
       "@type" : "@id"
     },
     "imports" : {
       "@id" : "http://spinrdf.org/spin#imports"
     },
     "Device" : {
-      "@id" : "http://w3id.org/rioter#Device"
+      "@id" : "https://w3id.org/saref#Device"
     },
     "Action" : {
       "@id" : "http://w3id.org/rioter#Action"
     },
+    "Attacker" : {
+      "@id" : "http://stop-it-project.eu/vocab#Attacker"
+    },
+    "WaterCriticalInfrastructure" : {
+      "@id" : "http://stop-it-project.eu/vocab#WaterCriticalInfrastructure"
+    },
+    "Surface" : {
+      "@id" : "http://stop-it-project.eu/vocab#Surface"
+    },
     "risk" : {
-      "@id" : "http://w3id.org/rioter/risk#risk",
+      "@id" : "http://stop-it-project.eu/vocab#risk",
       "@type" : "@id"
     },
     "description" : {
       "@id" : "http://w3id.org/rioter#description",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Atmospheric" : {
+      "@id" : "http://stop-it-project.eu/vocab#Atmospheric"
+    },
     "NaturalEvent" : {
-      "@id" : "http://w3id.org/rioter/risk#NaturalEvent"
+      "@id" : "http://stop-it-project.eu/vocab#NaturalEvent"
     },
     "PhysicalObject" : {
       "@id" : "http://w3id.org/rioter#PhysicalObject"
     },
+    "Reservoir" : {
+      "@id" : "http://stop-it-project.eu/vocab#Reservoir"
+    },
+    "Firewall" : {
+      "@id" : "http://stop-it-project.eu/vocab#Firewall"
+    },
+    "Ocean" : {
+      "@id" : "http://stop-it-project.eu/vocab#Ocean"
+    },
     "LoAS" : {
-      "@id" : "http://w3id.org/rioter/risk#LoAS",
+      "@id" : "http://stop-it-project.eu/vocab#LoAS",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Sensor" : {
+      "@id" : "http://stop-it-project.eu/vocab#Sensor"
     }
   }
 }

@@ -1,59 +1,11 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/rioter#Asset"
-    }, {
-      "@id" : "_:genid3"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Consequence"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/rioter/risk#associatedRisk"
-  } ]
-}, {
-  "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/rioter/risk#risk"
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/rioter#Asset"
-    }, {
-      "@id" : "_:genid7"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Consequence"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/rioter/risk#consequenceDimension"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/rioter#Asset"
-    }, {
-      "@id" : "_:genid11"
-    } ]
+    "@id" : "http://stop-it-project.eu/vocab#consequenceDimension"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
@@ -83,92 +35,7 @@
   "@id" : "http://spinrdf.org/spin#imports",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://w3id.org/rioter#Action",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#Asset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  }, {
-    "@id" : "_:genid1"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#CriticalInfrastructure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#Infrastructure"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#Device",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#System"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#Event",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#Indicator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/saref#Measurement"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#Infrastructure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#PhysicalSphere"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#NaturalArtifact",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#SampledFeature"
-  }, {
-    "@id" : "http://w3id.org/rioter/risk#PhysicalSphere"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#PhysicalObject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#Asset"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#SampledFeature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#PhysicalObject"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#System",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#DigitalSphere"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter#domain",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://w3id.org/rioter#name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://w3id.org/rioter/risk",
+  "@id" : "http://stop-it-project.eu/vocab",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Achim Mälzer (IWW)"
@@ -202,104 +69,319 @@
   } ],
   "http://spinrdf.org/spin#imports" : [ {
     "@id" : "http://topbraid.org/spin/owlrl-all"
+  }, {
+    "@id" : "http://topbraid.org/spin/spinowl"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://w3id.org/rioter/risk"
+    "@id" : "http://stop-it-project.eu/vocab"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.1"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Action",
+  "@id" : "http://stop-it-project.eu/vocab#Acquifer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#Action"
+    "@id" : "http://stop-it-project.eu/vocab#Groundwater"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Anomaly",
+  "@id" : "http://stop-it-project.eu/vocab#Action",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Actuator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Event"
+    "@id" : "http://stop-it-project.eu/vocab#DistributionDevice"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Consequence",
+  "@id" : "http://stop-it-project.eu/vocab#Anomaly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Event"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Atmospheric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#BodyOfWater"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Attacker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Source"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Basin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Bay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#BodyOfWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#NaturalArtifact"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Cameras",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#SecurityDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#CatchmentArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#NaturalArtifact"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Channel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Consequence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#CyberRisk",
+  "@id" : "http://stop-it-project.eu/vocab#ConsequenceMitigation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#DigitalSphere",
+  "@id" : "http://stop-it-project.eu/vocab#ControlSystems",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#PhysicalObject"
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Event",
+  "@id" : "http://stop-it-project.eu/vocab#CyberBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#CyberRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Dam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#DistributionDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#WaterDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#DistributionFlowDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#WaterDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#EconomicPolicy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#EnergyCriticalInfrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#CriticalInfrastructure"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Estuary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/rioter#Event"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Human",
+  "@id" : "http://stop-it-project.eu/vocab#ExternalAttacker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Attacker" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#ExternalSupplier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Source" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Fault",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#PhysicalSphere"
+    "@id" : "http://stop-it-project.eu/vocab#Source"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#LoAH",
+  "@id" : "http://stop-it-project.eu/vocab#Firewall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#SecurityDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#FlowMovingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#FlowStorageDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Glacier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Groundwater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#BodyOfWater"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#HumanFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Fault" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Infiltration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Groundwater"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#InterdependantCI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Source" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#InternalAttacker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Attacker" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Lagoon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Lake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Land",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#LoAH",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#LoAS",
+  "@id" : "http://stop-it-project.eu/vocab#LoAS",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#LoC",
+  "@id" : "http://stop-it-project.eu/vocab#LoC",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Mitigation",
+  "@id" : "http://stop-it-project.eu/vocab#M01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#PhysicalBarrier" ],
+  "http://w3id.org/rioter#name" : [ {
+    "@value" : "FencesAndWalls"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#ManMadeArtifact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#WaterObject"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Measure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Mitigation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   }, {
-    "@id" : "_:genid5"
+    "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#NaturalEvent",
+  "@id" : "http://stop-it-project.eu/vocab#Mouth",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#NaturalArtifact"
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#NaturalEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Event"
   }, {
-    "@id" : "http://w3id.org/rioter/risk#Event"
+    "@id" : "http://w3id.org/rioter#NaturalArtifact"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#PhysicalRisk",
+  "@id" : "http://stop-it-project.eu/vocab#Ocean",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#PhysicalSphere",
+  "@id" : "http://stop-it-project.eu/vocab#PhysicalBarrier",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter#PhysicalObject"
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Predictive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/rioter/risk#Action" ],
+  "@id" : "http://stop-it-project.eu/vocab#PhysicalRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Pipes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#FlowMovingDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Plans",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Predictive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Action" ],
   "http://w3id.org/rioter#description" : [ {
     "@value" : "Action derived from the computation of some system"
   } ],
@@ -307,8 +389,8 @@
     "@value" : "Predictive Action"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Proactive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/rioter/risk#Action" ],
+  "@id" : "http://stop-it-project.eu/vocab#Proactive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Action" ],
   "http://w3id.org/rioter#description" : [ {
     "@value" : "Action derived from some scheduled action."
   } ],
@@ -316,14 +398,20 @@
     "@value" : "Proactive"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Problem",
+  "@id" : "http://stop-it-project.eu/vocab#Problem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Event"
+    "@id" : "http://stop-it-project.eu/vocab#Event"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Reactive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/rioter/risk#Action" ],
+  "@id" : "http://stop-it-project.eu/vocab#Pump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#FlowMovingDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Reactive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://stop-it-project.eu/vocab#Action" ],
   "http://w3id.org/rioter#description" : [ {
     "@value" : "Action produced once the threat has been materialised"
   } ],
@@ -331,137 +419,290 @@
     "@value" : "Reactive Action"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Risk",
+  "@id" : "http://stop-it-project.eu/vocab#Redundancy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Event"
+    "@id" : "http://stop-it-project.eu/vocab#Measure"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Software",
+  "@id" : "http://stop-it-project.eu/vocab#Reservoir",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#DigitalSphere"
+    "@id" : "http://stop-it-project.eu/vocab#Groundwater"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Source",
+  "@id" : "http://stop-it-project.eu/vocab#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Threat"
+    "@id" : "http://stop-it-project.eu/vocab#Event"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#River",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Stream"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#SCADA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#DistributionDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Sea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#SecurityDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#WaterDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#DistributionDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#SmartLocks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#SecurityDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Spring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Stream",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Surface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#BodyOfWater"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Tank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#FlowStorageDevice"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#TransportCriticalInfrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#CriticalInfrastructure"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Vulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#WaterCriticalInfrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#CriticalInfrastructure"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#WaterDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#WaterObject"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "https://w3id.org/saref#Device"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Threat",
+  "@id" : "http://stop-it-project.eu/vocab#WaterObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://w3id.org/rioter#PhysicalObject"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#Vulnerability",
+  "@id" : "http://stop-it-project.eu/vocab#Watershed",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#affects",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://stop-it-project.eu/vocab#Wetland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Surface"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#Wind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#Atmospheric"
+  } ]
+}, {
+  "@id" : "http://stop-it-project.eu/vocab#affects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#associatedRisk",
+  "@id" : "http://stop-it-project.eu/vocab#associatedRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Source"
+    "@id" : "http://stop-it-project.eu/vocab#Source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#consequence",
+  "@id" : "http://stop-it-project.eu/vocab#consequence",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Consequence"
+    "@id" : "http://stop-it-project.eu/vocab#Consequence"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#consequenceDimension",
+  "@id" : "http://stop-it-project.eu/vocab#consequenceDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Mitigation"
+    "@id" : "http://stop-it-project.eu/vocab#Mitigation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Consequence"
+    "@id" : "http://stop-it-project.eu/vocab#Consequence"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#event",
+  "@id" : "http://stop-it-project.eu/vocab#event",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/rioter#Asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Event"
+    "@id" : "http://stop-it-project.eu/vocab#Event"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#identifier",
+  "@id" : "http://stop-it-project.eu/vocab#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#mitigationAction",
+  "@id" : "http://stop-it-project.eu/vocab#mitigationAction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Mitigation"
+    "@id" : "http://stop-it-project.eu/vocab#Mitigation"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#monitoredBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter#Device"
-  } ]
+  "@id" : "http://stop-it-project.eu/vocab#monitoredBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#objective",
+  "@id" : "http://stop-it-project.eu/vocab#objective",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter#Indicator"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#risk",
+  "@id" : "http://stop-it-project.eu/vocab#risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Risk"
+    "@id" : "http://stop-it-project.eu/vocab#Risk"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#source",
+  "@id" : "http://stop-it-project.eu/vocab#source",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Source"
+    "@id" : "http://stop-it-project.eu/vocab#Source"
   } ]
 }, {
-  "@id" : "http://w3id.org/rioter/risk#vulnerability",
+  "@id" : "http://stop-it-project.eu/vocab#vulnerability",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/rioter#Asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/rioter/risk#Vulnerability"
+    "@id" : "http://stop-it-project.eu/vocab#Vulnerability"
   } ]
 }, {
-  "@id" : "http://w3id.org/saref#Measurement",
+  "@id" : "http://w3id.org/rioter#Action",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#Asset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#CriticalInfrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#Infrastructure"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#Infrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#PhysicalObject"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#NaturalArtifact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://stop-it-project.eu/vocab#WaterObject"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#PhysicalObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#Asset"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://w3id.org/rioter#domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://w3id.org/rioter#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Feature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/rioter#PhysicalObject"
   } ]
 } ]

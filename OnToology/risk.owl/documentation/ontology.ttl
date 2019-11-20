@@ -1,26 +1,27 @@
-@prefix : <http://w3id.org/rioter/risk#> .
+@prefix : <http://stop-it-project.eu/vocab#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://w3id.org/rioter/risk> .
+@base <http://stop-it-project.eu/vocab> .
 
-<http://w3id.org/rioter/risk> rdf:type owl:Ontology ;
-                               owl:versionIRI <http://w3id.org/rioter/risk> ;
-                               <http://purl.org/dc/elements/1.1/contributor> "Achim Mälzer (IWW)" ,
-                                                                             "Enric Bonet (CETAQUA)" ,
-                                                                             "Fabian Vollmer (IWW)" ,
-                                                                             "George Karavokiros (NTUA)" ;
-                               <http://purl.org/dc/elements/1.1/creator> "Aitor Corchero (Eurecat Technology Centre)" ;
-                               <http://purl.org/dc/elements/1.1/description> "Rioter Extension focused on managing risks in critical infrastructures" ;
-                               <http://purl.org/dc/elements/1.1/source> "risk" ;
-                               <http://purl.org/dc/elements/1.1/title> "Cyber-Physic Risk Management Ontology in Critical Infrastructures" ;
-                               <http://purl.org/dc/terms/created> "01/07/2018" ;
-                               <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT" ;
-                               <http://purl.org/dc/terms/modified> "16/11/2018" ;
-                               <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> ;
-                               owl:versionInfo "1.1" .
+<http://stop-it-project.eu/vocab> rdf:type owl:Ontology ;
+                                   owl:versionIRI <http://stop-it-project.eu/vocab> ;
+                                   <http://purl.org/dc/elements/1.1/contributor> "Achim Mälzer (IWW)" ,
+                                                                                 "Enric Bonet (CETAQUA)" ,
+                                                                                 "Fabian Vollmer (IWW)" ,
+                                                                                 "George Karavokiros (NTUA)" ;
+                                   <http://purl.org/dc/elements/1.1/creator> "Aitor Corchero (Eurecat Technology Centre)" ;
+                                   <http://purl.org/dc/elements/1.1/description> "Rioter Extension focused on managing risks in critical infrastructures" ;
+                                   <http://purl.org/dc/elements/1.1/source> "risk" ;
+                                   <http://purl.org/dc/elements/1.1/title> "Cyber-Physic Risk Management Ontology in Critical Infrastructures" ;
+                                   <http://purl.org/dc/terms/created> "01/07/2018" ;
+                                   <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT" ;
+                                   <http://purl.org/dc/terms/modified> "16/11/2018" ;
+                                   <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> ,
+                                                                     <http://topbraid.org/spin/spinowl> ;
+                                   owl:versionInfo "1.1" .
 
 #################################################################
 #    Annotation properties
@@ -66,76 +67,95 @@
 #    Object Properties
 #################################################################
 
-###  http://w3id.org/rioter#domain
-<http://w3id.org/rioter#domain> rdf:type owl:ObjectProperty .
-
-
-###  http://w3id.org/rioter/risk#affects
-:affects rdf:type owl:ObjectProperty ;
+###  http://stop-it-project.eu/vocab#affects
+:affects rdf:type owl:ObjectProperty ,
+                  owl:TransitiveProperty ;
          rdfs:domain :Risk ;
          rdfs:range :Risk .
 
 
-###  http://w3id.org/rioter/risk#associatedRisk
+###  http://stop-it-project.eu/vocab#associatedRisk
 :associatedRisk rdf:type owl:ObjectProperty ;
                 rdfs:domain :Source ;
                 rdfs:range :Risk .
 
 
-###  http://w3id.org/rioter/risk#consequence
+###  http://stop-it-project.eu/vocab#consequence
 :consequence rdf:type owl:ObjectProperty ;
              rdfs:domain :Risk ;
              rdfs:range :Consequence .
 
 
-###  http://w3id.org/rioter/risk#consequenceDimension
+###  http://stop-it-project.eu/vocab#consequenceDimension
 :consequenceDimension rdf:type owl:ObjectProperty ;
                       rdfs:domain :Mitigation ;
                       rdfs:range :Consequence .
 
 
-###  http://w3id.org/rioter/risk#event
+###  http://stop-it-project.eu/vocab#event
 :event rdf:type owl:ObjectProperty ;
        rdfs:domain <http://w3id.org/rioter#Asset> ;
        rdfs:range :Event .
 
 
-###  http://w3id.org/rioter/risk#mitigationAction
+###  http://stop-it-project.eu/vocab#mitigationAction
 :mitigationAction rdf:type owl:ObjectProperty ;
                   rdfs:domain :Risk ;
                   rdfs:range :Mitigation .
 
 
-###  http://w3id.org/rioter/risk#monitoredBy
-:monitoredBy rdf:type owl:ObjectProperty ;
-             rdfs:range <http://w3id.org/rioter#Device> .
+###  http://stop-it-project.eu/vocab#monitoredBy
+:monitoredBy rdf:type owl:ObjectProperty .
 
 
-###  http://w3id.org/rioter/risk#objective
+###  http://stop-it-project.eu/vocab#objective
 :objective rdf:type owl:ObjectProperty ;
-           rdfs:domain :Risk ;
-           rdfs:range <http://w3id.org/rioter#Indicator> .
+           rdfs:domain :Risk .
 
 
-###  http://w3id.org/rioter/risk#risk
+###  http://stop-it-project.eu/vocab#risk
 :risk rdf:type owl:ObjectProperty ;
       rdfs:range :Risk .
 
 
-###  http://w3id.org/rioter/risk#source
+###  http://stop-it-project.eu/vocab#source
 :source rdf:type owl:ObjectProperty ;
         rdfs:range :Source .
 
 
-###  http://w3id.org/rioter/risk#vulnerability
+###  http://stop-it-project.eu/vocab#vulnerability
 :vulnerability rdf:type owl:ObjectProperty ;
                rdfs:domain <http://w3id.org/rioter#Asset> ;
                rdfs:range :Vulnerability .
 
 
+###  http://w3id.org/rioter#domain
+<http://w3id.org/rioter#domain> rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://stop-it-project.eu/vocab#LoAH
+:LoAH rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+
+###  http://stop-it-project.eu/vocab#LoAS
+:LoAS rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:integer .
+
+
+###  http://stop-it-project.eu/vocab#LoC
+:LoC rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:integer .
+
+
+###  http://stop-it-project.eu/vocab#identifier
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
 
 ###  http://w3id.org/rioter#description
 <http://w3id.org/rioter#description> rdf:type owl:DatatypeProperty ;
@@ -147,29 +167,352 @@
                               rdfs:range xsd:string .
 
 
-###  http://w3id.org/rioter/risk#LoAH
-:LoAH rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:integer .
-
-
-###  http://w3id.org/rioter/risk#LoAS
-:LoAS rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:integer .
-
-
-###  http://w3id.org/rioter/risk#LoC
-:LoC rdf:type owl:DatatypeProperty ;
-     rdfs:range xsd:integer .
-
-
-###  http://w3id.org/rioter/risk#identifier
-:identifier rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:string .
-
-
 #################################################################
 #    Classes
 #################################################################
+
+###  http://stop-it-project.eu/vocab#Acquifer
+:Acquifer rdf:type owl:Class ;
+          rdfs:subClassOf :Groundwater .
+
+
+###  http://stop-it-project.eu/vocab#Action
+:Action rdf:type owl:Class .
+
+
+###  http://stop-it-project.eu/vocab#Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:subClassOf :DistributionDevice .
+
+
+###  http://stop-it-project.eu/vocab#Anomaly
+:Anomaly rdf:type owl:Class ;
+         rdfs:subClassOf :Event .
+
+
+###  http://stop-it-project.eu/vocab#Atmospheric
+:Atmospheric rdf:type owl:Class ;
+             rdfs:subClassOf :BodyOfWater .
+
+
+###  http://stop-it-project.eu/vocab#Attacker
+:Attacker rdf:type owl:Class ;
+          rdfs:subClassOf :Source .
+
+
+###  http://stop-it-project.eu/vocab#Basin
+:Basin rdf:type owl:Class ;
+       rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Bay
+:Bay rdf:type owl:Class ;
+     rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#BodyOfWater
+:BodyOfWater rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/rioter#NaturalArtifact> .
+
+
+###  http://stop-it-project.eu/vocab#Cameras
+:Cameras rdf:type owl:Class ;
+         rdfs:subClassOf :SecurityDevice .
+
+
+###  http://stop-it-project.eu/vocab#CatchmentArea
+:CatchmentArea rdf:type owl:Class ;
+               rdfs:subClassOf <http://w3id.org/rioter#NaturalArtifact> .
+
+
+###  http://stop-it-project.eu/vocab#Channel
+:Channel rdf:type owl:Class ;
+         rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Consequence
+:Consequence rdf:type owl:Class ;
+             rdfs:subClassOf owl:Thing .
+
+
+###  http://stop-it-project.eu/vocab#ConsequenceMitigation
+:ConsequenceMitigation rdf:type owl:Class ;
+                       rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#ControlSystems
+:ControlSystems rdf:type owl:Class ;
+                rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#CyberBarrier
+:CyberBarrier rdf:type owl:Class ;
+              rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#CyberRisk
+:CyberRisk rdf:type owl:Class ;
+           rdfs:subClassOf :Risk .
+
+
+###  http://stop-it-project.eu/vocab#Dam
+:Dam rdf:type owl:Class ;
+     rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#DistributionDevice
+:DistributionDevice rdf:type owl:Class ;
+                    rdfs:subClassOf :WaterDevice .
+
+
+###  http://stop-it-project.eu/vocab#DistributionFlowDevice
+:DistributionFlowDevice rdf:type owl:Class ;
+                        rdfs:subClassOf :WaterDevice .
+
+
+###  http://stop-it-project.eu/vocab#EconomicPolicy
+:EconomicPolicy rdf:type owl:Class ;
+                rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#EnergyCriticalInfrastructure
+:EnergyCriticalInfrastructure rdf:type owl:Class ;
+                              rdfs:subClassOf <http://w3id.org/rioter#CriticalInfrastructure> .
+
+
+###  http://stop-it-project.eu/vocab#Estuary
+:Estuary rdf:type owl:Class ;
+         rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <http://w3id.org/rioter#Event> .
+
+
+###  http://stop-it-project.eu/vocab#Fault
+:Fault rdf:type owl:Class ;
+       rdfs:subClassOf :Source .
+
+
+###  http://stop-it-project.eu/vocab#Firewall
+:Firewall rdf:type owl:Class ;
+          rdfs:subClassOf :SecurityDevice .
+
+
+###  http://stop-it-project.eu/vocab#FlowMovingDevice
+:FlowMovingDevice rdf:type owl:Class ;
+                  rdfs:subClassOf :DistributionFlowDevice .
+
+
+###  http://stop-it-project.eu/vocab#FlowStorageDevice
+:FlowStorageDevice rdf:type owl:Class ;
+                   rdfs:subClassOf :DistributionFlowDevice .
+
+
+###  http://stop-it-project.eu/vocab#Glacier
+:Glacier rdf:type owl:Class ;
+         rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Groundwater
+:Groundwater rdf:type owl:Class ;
+             rdfs:subClassOf :BodyOfWater .
+
+
+###  http://stop-it-project.eu/vocab#Infiltration
+:Infiltration rdf:type owl:Class ;
+              rdfs:subClassOf :Groundwater .
+
+
+###  http://stop-it-project.eu/vocab#Lagoon
+:Lagoon rdf:type owl:Class ;
+        rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Lake
+:Lake rdf:type owl:Class ;
+      rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Land
+:Land rdf:type owl:Class ;
+      rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#ManMadeArtifact
+:ManMadeArtifact rdf:type owl:Class ;
+                 rdfs:subClassOf :WaterObject .
+
+
+###  http://stop-it-project.eu/vocab#Measure
+:Measure rdf:type owl:Class .
+
+
+###  http://stop-it-project.eu/vocab#Mitigation
+:Mitigation rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :consequenceDimension ;
+                              owl:allValuesFrom :Consequence
+                            ] .
+
+
+###  http://stop-it-project.eu/vocab#Mouth
+:Mouth rdf:type owl:Class ;
+       rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#NaturalEvent
+:NaturalEvent rdf:type owl:Class ;
+              rdfs:subClassOf :Event ,
+                              <http://w3id.org/rioter#NaturalArtifact> .
+
+
+###  http://stop-it-project.eu/vocab#Ocean
+:Ocean rdf:type owl:Class ;
+       rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#PhysicalBarrier
+:PhysicalBarrier rdf:type owl:Class ;
+                 rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#PhysicalRisk
+:PhysicalRisk rdf:type owl:Class ;
+              rdfs:subClassOf :Risk .
+
+
+###  http://stop-it-project.eu/vocab#Pipes
+:Pipes rdf:type owl:Class ;
+       rdfs:subClassOf :FlowMovingDevice .
+
+
+###  http://stop-it-project.eu/vocab#Plans
+:Plans rdf:type owl:Class ;
+       rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#Problem
+:Problem rdf:type owl:Class ;
+         rdfs:subClassOf :Event .
+
+
+###  http://stop-it-project.eu/vocab#Pump
+:Pump rdf:type owl:Class ;
+      rdfs:subClassOf :FlowMovingDevice .
+
+
+###  http://stop-it-project.eu/vocab#Redundancy
+:Redundancy rdf:type owl:Class ;
+            rdfs:subClassOf :Measure .
+
+
+###  http://stop-it-project.eu/vocab#Reservoir
+:Reservoir rdf:type owl:Class ;
+           rdfs:subClassOf :Groundwater .
+
+
+###  http://stop-it-project.eu/vocab#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf :Event .
+
+
+###  http://stop-it-project.eu/vocab#River
+:River rdf:type owl:Class ;
+       rdfs:subClassOf :Stream .
+
+
+###  http://stop-it-project.eu/vocab#SCADA
+:SCADA rdf:type owl:Class ;
+       rdfs:subClassOf :DistributionDevice .
+
+
+###  http://stop-it-project.eu/vocab#Sea
+:Sea rdf:type owl:Class ;
+     rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#SecurityDevice
+:SecurityDevice rdf:type owl:Class ;
+                rdfs:subClassOf :WaterDevice .
+
+
+###  http://stop-it-project.eu/vocab#Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf :DistributionDevice .
+
+
+###  http://stop-it-project.eu/vocab#SmartLocks
+:SmartLocks rdf:type owl:Class ;
+            rdfs:subClassOf :SecurityDevice .
+
+
+###  http://stop-it-project.eu/vocab#Source
+:Source rdf:type owl:Class .
+
+
+###  http://stop-it-project.eu/vocab#Spring
+:Spring rdf:type owl:Class ;
+        rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Stream
+:Stream rdf:type owl:Class ;
+        rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Surface
+:Surface rdf:type owl:Class ;
+         rdfs:subClassOf :BodyOfWater .
+
+
+###  http://stop-it-project.eu/vocab#Tank
+:Tank rdf:type owl:Class ;
+      rdfs:subClassOf :FlowStorageDevice .
+
+
+###  http://stop-it-project.eu/vocab#TransportCriticalInfrastructure
+:TransportCriticalInfrastructure rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://w3id.org/rioter#CriticalInfrastructure> .
+
+
+###  http://stop-it-project.eu/vocab#Vulnerability
+:Vulnerability rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing .
+
+
+###  http://stop-it-project.eu/vocab#WaterCriticalInfrastructure
+:WaterCriticalInfrastructure rdf:type owl:Class ;
+                             rdfs:subClassOf <http://w3id.org/rioter#CriticalInfrastructure> .
+
+
+###  http://stop-it-project.eu/vocab#WaterDevice
+:WaterDevice rdf:type owl:Class ;
+             rdfs:subClassOf :WaterObject ,
+                             <https://w3id.org/saref#Device> .
+
+
+###  http://stop-it-project.eu/vocab#WaterObject
+:WaterObject rdf:type owl:Class ;
+             rdfs:subClassOf <http://w3id.org/rioter#PhysicalObject> .
+
+
+###  http://stop-it-project.eu/vocab#Watershed
+:Watershed rdf:type owl:Class ;
+           rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Wetland
+:Wetland rdf:type owl:Class ;
+         rdfs:subClassOf :Surface .
+
+
+###  http://stop-it-project.eu/vocab#Wind
+:Wind rdf:type owl:Class ;
+      rdfs:subClassOf :Atmospheric .
+
 
 ###  http://w3id.org/rioter#Action
 <http://w3id.org/rioter#Action> rdf:type owl:Class ;
@@ -178,15 +521,7 @@
 
 ###  http://w3id.org/rioter#Asset
 <http://w3id.org/rioter#Asset> rdf:type owl:Class ;
-                               rdfs:subClassOf owl:Thing ,
-                                               [ owl:intersectionOf ( <http://w3id.org/rioter#Asset>
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty :risk ;
-                                                                        owl:allValuesFrom :Risk
-                                                                      ]
-                                                                    ) ;
-                                                 rdf:type owl:Class
-                                               ] .
+                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> .
 
 
 ###  http://w3id.org/rioter#CriticalInfrastructure
@@ -194,30 +529,19 @@
                                                 rdfs:subClassOf <http://w3id.org/rioter#Infrastructure> .
 
 
-###  http://w3id.org/rioter#Device
-<http://w3id.org/rioter#Device> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://w3id.org/rioter#System> .
-
-
 ###  http://w3id.org/rioter#Event
 <http://w3id.org/rioter#Event> rdf:type owl:Class ;
                                rdfs:subClassOf owl:Thing .
 
 
-###  http://w3id.org/rioter#Indicator
-<http://w3id.org/rioter#Indicator> rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://w3id.org/saref#Measurement> .
-
-
 ###  http://w3id.org/rioter#Infrastructure
 <http://w3id.org/rioter#Infrastructure> rdf:type owl:Class ;
-                                        rdfs:subClassOf :PhysicalSphere .
+                                        rdfs:subClassOf <http://w3id.org/rioter#PhysicalObject> .
 
 
 ###  http://w3id.org/rioter#NaturalArtifact
 <http://w3id.org/rioter#NaturalArtifact> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://w3id.org/rioter#SampledFeature> ,
-                                                         :PhysicalSphere .
+                                         rdfs:subClassOf :WaterObject .
 
 
 ###  http://w3id.org/rioter#PhysicalObject
@@ -225,142 +549,65 @@
                                         rdfs:subClassOf <http://w3id.org/rioter#Asset> .
 
 
-###  http://w3id.org/rioter#SampledFeature
-<http://w3id.org/rioter#SampledFeature> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://w3id.org/rioter#PhysicalObject> .
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class .
 
 
-###  http://w3id.org/rioter#System
-<http://w3id.org/rioter#System> rdf:type owl:Class ;
-                                rdfs:subClassOf :DigitalSphere .
-
-
-###  http://w3id.org/rioter/risk#Action
-:Action rdf:type owl:Class ;
-        rdfs:subClassOf <http://w3id.org/rioter#Action> .
-
-
-###  http://w3id.org/rioter/risk#Anomaly
-:Anomaly rdf:type owl:Class ;
-         rdfs:subClassOf :Event .
-
-
-###  http://w3id.org/rioter/risk#Consequence
-:Consequence rdf:type owl:Class ;
-             rdfs:subClassOf owl:Thing .
-
-
-###  http://w3id.org/rioter/risk#CyberRisk
-:CyberRisk rdf:type owl:Class ;
-           rdfs:subClassOf :Risk .
-
-
-###  http://w3id.org/rioter/risk#DigitalSphere
-:DigitalSphere rdf:type owl:Class ;
-               rdfs:subClassOf <http://w3id.org/rioter#PhysicalObject> .
-
-
-###  http://w3id.org/rioter/risk#Event
-:Event rdf:type owl:Class ;
-       rdfs:subClassOf <http://w3id.org/rioter#Event> .
-
-
-###  http://w3id.org/rioter/risk#Human
-:Human rdf:type owl:Class ;
-       rdfs:subClassOf :PhysicalSphere .
-
-
-###  http://w3id.org/rioter/risk#Mitigation
-:Mitigation rdf:type owl:Class ;
-            rdfs:subClassOf owl:Thing ,
-                            [ owl:intersectionOf ( <http://w3id.org/rioter#Asset>
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :consequenceDimension ;
-                                                     owl:allValuesFrom :Consequence
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] .
-
-
-###  http://w3id.org/rioter/risk#NaturalEvent
-:NaturalEvent rdf:type owl:Class ;
-              rdfs:subClassOf <http://w3id.org/rioter#NaturalArtifact> ,
-                              :Event .
-
-
-###  http://w3id.org/rioter/risk#PhysicalRisk
-:PhysicalRisk rdf:type owl:Class ;
-              rdfs:subClassOf :Risk .
-
-
-###  http://w3id.org/rioter/risk#PhysicalSphere
-:PhysicalSphere rdf:type owl:Class ;
-                rdfs:subClassOf <http://w3id.org/rioter#PhysicalObject> .
-
-
-###  http://w3id.org/rioter/risk#Problem
-:Problem rdf:type owl:Class ;
-         rdfs:subClassOf :Event .
-
-
-###  http://w3id.org/rioter/risk#Risk
-:Risk rdf:type owl:Class ;
-      rdfs:subClassOf :Event .
-
-
-###  http://w3id.org/rioter/risk#Software
-:Software rdf:type owl:Class ;
-          rdfs:subClassOf :DigitalSphere .
-
-
-###  http://w3id.org/rioter/risk#Source
-:Source rdf:type owl:Class ;
-        rdfs:subClassOf :Threat ,
-                        [ owl:intersectionOf ( <http://w3id.org/rioter#Asset>
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :associatedRisk ;
-                                                 owl:allValuesFrom :Risk
-                                               ]
-                                             ) ;
-                          rdf:type owl:Class
-                        ] .
-
-
-###  http://w3id.org/rioter/risk#Threat
-:Threat rdf:type owl:Class ;
-        rdfs:subClassOf owl:Thing .
-
-
-###  http://w3id.org/rioter/risk#Vulnerability
-:Vulnerability rdf:type owl:Class ;
-               rdfs:subClassOf owl:Thing .
-
-
-###  http://w3id.org/saref#Measurement
-<http://w3id.org/saref#Measurement> rdf:type owl:Class ;
-                                    rdfs:subClassOf owl:Thing .
+###  https://w3id.org/saref#Device
+<https://w3id.org/saref#Device> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://w3id.org/rioter#PhysicalObject> .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://w3id.org/rioter/risk#Predictive
+###  http://stop-it-project.eu/vocab#ExternalAttacker
+:ExternalAttacker rdf:type owl:NamedIndividual ,
+                           :Attacker .
+
+
+###  http://stop-it-project.eu/vocab#ExternalSupplier
+:ExternalSupplier rdf:type owl:NamedIndividual ,
+                           :Source .
+
+
+###  http://stop-it-project.eu/vocab#HumanFault
+:HumanFault rdf:type owl:NamedIndividual ,
+                     :Fault .
+
+
+###  http://stop-it-project.eu/vocab#InterdependantCI
+:InterdependantCI rdf:type owl:NamedIndividual ,
+                           :Source .
+
+
+###  http://stop-it-project.eu/vocab#InternalAttacker
+:InternalAttacker rdf:type owl:NamedIndividual ,
+                           :Attacker .
+
+
+###  http://stop-it-project.eu/vocab#M01
+:M01 rdf:type owl:NamedIndividual ,
+              :PhysicalBarrier ;
+     <http://w3id.org/rioter#name> "FencesAndWalls" .
+
+
+###  http://stop-it-project.eu/vocab#Predictive
 :Predictive rdf:type owl:NamedIndividual ,
                      :Action ;
             <http://w3id.org/rioter#description> "Action derived from the computation of some system" ;
             <http://w3id.org/rioter#name> "Predictive Action" .
 
 
-###  http://w3id.org/rioter/risk#Proactive
+###  http://stop-it-project.eu/vocab#Proactive
 :Proactive rdf:type owl:NamedIndividual ,
                     :Action ;
            <http://w3id.org/rioter#description> "Action derived from some scheduled action." ;
            <http://w3id.org/rioter#name> "Proactive" .
 
 
-###  http://w3id.org/rioter/risk#Reactive
+###  http://stop-it-project.eu/vocab#Reactive
 :Reactive rdf:type owl:NamedIndividual ,
                    :Action ;
           <http://w3id.org/rioter#description> "Action produced once the threat has been materialised" ;
